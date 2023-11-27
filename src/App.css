@@ -1,0 +1,133 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Problem.css */
+.problem {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #a01c1c;
+}
+
+.problem h4 {
+  margin: 0;
+}
+
+.problem h4:first-child {
+  color: #333;
+}
+
+.problem h4:last-child {
+  color: #555;
+}
+/* Problem.css */
+.table-container {
+  margin: 20px;
+}
+
+.problem-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.problem-table th, .problem-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.problem-table th {
+  background-color: #000000;
+}
+
+.problem-table tr:hover {
+  background-color: #8a2121;
+}
+
+.table-container {
+  margin: 20px;
+}
+
+.contest-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contest-table th, .contest-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.contest-table th {
+  background-color: #660000;
+}
+
+.contest-table tr:hover {
+  background-color: #6d0b0b;
+}
+/* Problem.css */
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.input-container button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.input-container button:hover {
+  background-color: #45a049;
+}
