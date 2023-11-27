@@ -7,7 +7,7 @@ import { BrowserRouter, Link } from "react-router-dom";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <nav className="">
+      <nav className="space">
         <Link to="/">contest</Link>
         <Link to="/Problem">problems</Link>
       </nav>

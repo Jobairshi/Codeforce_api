@@ -37,7 +37,7 @@ export default function Problem() {
             </div>
             <div className='input-container'> 
             <textarea
-                    placeholder='Enter a name'
+                    placeholder='Enter codeforce id'
                     value={User_name}
                     onChange={submitName}
                 />

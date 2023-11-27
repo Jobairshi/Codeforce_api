@@ -131,3 +131,8 @@
 .input-container button:hover {
   background-color: #45a049;
 }
+.space{
+  display: flex;
+  gap: 1rem;
+  margin-left: 60px;
+}

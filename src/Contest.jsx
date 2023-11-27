@@ -27,6 +27,7 @@ function Contest() {
           id=""
           cols="30"
           rows="2"
+          placeholder="enter codeforce id"
         ></textarea>
       </div>
       {data.status === "OK" && data.result.length > 0 && (
