@@ -1,13 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELP!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #gif {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+
+        #yesButton {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        #noButton {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+
+        #noButtonPressCount {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img id="gif" src="https://media.tenor.com/cg1oDykTt_kAAAAi/bunny-rabbit.gif" alt="gif">
+    <h1 id="gayeb">Can you give some money!! O.O</h1>
+    <div id="buttons">
+        <button id="yesButton" onclick="showThankYou()">YES</button>
+        <button id="noButton" onclick="changeSize()">NO</button>
+        
+    </div>
+
+    <script>
+        var originalFontSize;
+        var noButtonPressCount = 0;
+
+        function changeSize() {
+            var yesButton = document.getElementById("yesButton");
+            var noButton = document.getElementById("noButton");
+            var noButtonPressCountDisplay = document.getElementById("noButtonPressCount");
+            var computedStyle = window.getComputedStyle(yesButton);
+            var fontSize = parseInt(computedStyle.getPropertyValue("font-size"));
+            if (!originalFontSize) {
+                originalFontSize = fontSize;
+            }
+            fontSize += 40;
+            yesButton.style.fontSize = fontSize + "px";
+
+            // Increment noButtonPressCount every time the "NO" button is clicked
+            noButtonPressCount++;
+            console.log(noButtonPressCount);
+            if(noButtonPressCount == 0)
+            {
+                noButton.innerText = "NO";
+            }
+            if(noButtonPressCount == 1)
+            {
+                noButton.innerText = "Please think again";
+            }
+            if(noButtonPressCount == 2)
+            {
+                noButton.innerText = "Please think again and again";
+            }
+            if(noButtonPressCount == 3)
+            {
+                noButton.innerText = "Please Please think -_-";
+            }
+            if(noButtonPressCount == 4)
+            {
+                noButton.innerText = "Please Please Please think -_-";
+            }
+            if(noButtonPressCount == 5)
+            {
+                noButton.innerText = "Please i will be sed";
+            }
+            if(noButtonPressCount == 6)
+            {
+                noButton.innerText = "Please i will be  very sed";
+            }
+            if(noButtonPressCount == 7)
+            {
+                noButton.innerText = "Please i will be  very very sed";
+            }
+            if(noButtonPressCount == 8)
+            {
+                noButton.innerText = "Please can i have a chance =.=";
+            }
+            if(noButtonPressCount == 9)
+            {
+                noButton.innerText = "last chance to think!!";
+            }
+            if(noButtonPressCount == 10)
+            {
+                noButton.innerText = "Okay i am just kidding!!";
+            }
+            if(noButtonPressCount >10)
+            {
+                noButton.style.display = "none";
+            }
+            
+        }
+        function showThankYou() {
+            var buttonsDiv = document.getElementById("buttons");
+            buttonsDiv.innerHTML = "<h2>Thank You!</h2>";
+          
+            // Change the gif image
+            var gif = document.getElementById("gif");
+            gif.src = "https://media.tenor.com/8dDI83bom3UAAAAi/money-money-money.gif";
+            var gayeb = document.getElementById("gayeb");
+            gayeb.style.display = "none";
+          }
+    </script>
+
+</body>
+
 </html>
